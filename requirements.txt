@@ -1,0 +1,5 @@
+streamlit
+airportsdata
+scikit-learn
+pandas
+numpy
