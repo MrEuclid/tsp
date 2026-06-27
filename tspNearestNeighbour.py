@@ -1,3 +1,11 @@
+import streamlit as st
+import airportsdata
+import pandas as pd
+import numpy as np
+from sklearn.metrics.pairwise import haversine_distances
+from math import radians
+import itertools  # Added to generate all possible route permutations
+
 # --- 1. Data Loading ---
 @st.cache_data
 def get_airport_db():
@@ -7,7 +15,7 @@ def get_airport_db():
 airports = get_airport_db()
 
 # --- 2. User Input ---
-default_route = "PNH, AKL, BKK, SGN, NRT"
+default_route = "KTI, BKK, SIN,RGN"
 user_input = st.text_input("Enter IATA Codes (comma-separated):", value=default_route)
 
 if st.button("Optimize Route"):
