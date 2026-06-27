@@ -21,7 +21,7 @@ def get_airport_db():
 airports = get_airport_db()
 
 # --- 2. User Input ---
-default_route = "PNH, REP, BKK, SGN, NRT"
+default_route = "KTI, RGN, BKK, SIN,VTN"
 user_input = st.text_input("Enter IATA Codes (comma-separated):", value=default_route)
 
 if st.button("Optimize Route"):
